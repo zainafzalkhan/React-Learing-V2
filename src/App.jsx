@@ -1,51 +1,23 @@
-import './App.css'
-import CounterApp from './components/CounterApp'
-import ProjectSection from './components/ProjectSection'
-import ToggleButton from './components/ToggleButton'
-import Accordion from './components/Accordion'
-import TemperatureConverter from './components/TemperatureConverter'
+import { Routes, Route, Navigate } from 'react-router'
+import RootLayout from './layouts/RootLayout'
+import ProjectsPage from './pages/ProjectsPage'
+import LearningsPage from './pages/LearningsPage'
+import CaseStudiesPage from './pages/CaseStudiesPage'
+import PowPage from './pages/PowPage'
+import ContactPage from './pages/ContactPage'
+
 function App() {
   return (
-    <div className="app">
-      <header className="app__header">
-        <h1 className="app__title">React Basics Practice</h1>
-        <p className="app__description">
-          Small projects to understand React fundamentals — starting with state.
-        </p>
-      </header>
-
-      <main className="app__projects">
-        <ProjectSection
-          title="Counter"
-          description="Practice useState with increment, decrement, and reset."
-        >
-          <CounterApp />
-        </ProjectSection>
-
-        <ProjectSection
-          title="Toggle Button"
-          description="Practice useState with toggle button."
-        >
-          <ToggleButton />
-        </ProjectSection>
-
-        <ProjectSection
-          title="Accordion"
-          description="Practice useState with accordion."
-        >
-          <Accordion />
-        </ProjectSection>
-
-        <ProjectSection
-          title="Temperature Converter"
-          description="Practice useState with temperature converter."
-        >
-          <TemperatureConverter />
-        </ProjectSection>
-
-        {/* Add more ProjectSection blocks here as you build new mini projects */}
-      </main>
-    </div>
+    <Routes>
+      <Route element={<RootLayout />}>
+        <Route index element={<Navigate to="/projects" replace />} />
+        <Route path="projects" element={<ProjectsPage />} />
+        <Route path="learnings" element={<LearningsPage />} />
+        <Route path="case-studies" element={<CaseStudiesPage />} />
+        <Route path="pow" element={<PowPage />} />
+        <Route path="contact" element={<ContactPage />} />
+      </Route>
+    </Routes>
   )
 }
 

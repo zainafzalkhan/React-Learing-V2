@@ -1,0 +1,123 @@
+.use-ref {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.use-ref__demo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.03);
+  text-align: center;
+}
+
+.use-ref__title {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.use-ref__hint {
+  margin: 0;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.55);
+  line-height: 1.5;
+}
+
+.use-ref__value {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.use-ref__stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem 1.5rem;
+}
+
+.use-ref__stat {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.use-ref__stat strong {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.55);
+  text-transform: uppercase;
+}
+
+.use-ref__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.use-ref__input {
+  flex: 1;
+  min-width: 160px;
+  max-width: 280px;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  font-family: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  color: inherit;
+  transition: border-color 0.2s, background-color 0.2s;
+  box-sizing: border-box;
+}
+
+.use-ref__input:hover {
+  border-color: rgba(100, 108, 255, 0.5);
+}
+
+.use-ref__input:focus {
+  outline: none;
+  border-color: #646cff;
+  background: rgba(100, 108, 255, 0.08);
+}
+
+@media (prefers-color-scheme: light) {
+  .use-ref__demo {
+    border-color: rgba(33, 53, 71, 0.1);
+    background: rgba(33, 53, 71, 0.03);
+  }
+
+  .use-ref__hint {
+    color: rgba(33, 53, 71, 0.6);
+  }
+
+  .use-ref__stat strong {
+    color: rgba(33, 53, 71, 0.55);
+  }
+
+  .use-ref__input {
+    border-color: rgba(33, 53, 71, 0.15);
+    background: #ffffff;
+  }
+
+  .use-ref__input:hover {
+    border-color: rgba(100, 108, 255, 0.6);
+  }
+
+  .use-ref__input:focus {
+    background: rgba(100, 108, 255, 0.05);
+  }
+}
